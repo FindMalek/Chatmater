@@ -1,6 +1,6 @@
 import type { Icon } from "lucide-react";
 
-import { Icons } from "@/components/icons";
+import { Icons } from "@/components/Icons";
 
 export type NavItem = {
   title: string;

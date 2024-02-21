@@ -5,7 +5,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div>
-      <h1>Recommender</h1>
+      <h1>Messages goes here</h1>
     </div>
   );
 }

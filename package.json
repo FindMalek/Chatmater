@@ -16,6 +16,7 @@
     "test-all": "pnpm run check-types && npm run check-format && npm run check-lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.5",
     "@vercel/analytics": "^1.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -26,7 +27,8 @@
     "react-dom": "^18",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^0.9.0"
   },
   "devDependencies": {
     "@types/node": "^20",
