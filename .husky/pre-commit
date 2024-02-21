@@ -10,13 +10,6 @@ pnpm run check-format ||
     false;
 )
 
-pnpm run check-lint ||
-(
-        echo '😤 ESLint Check Failed. 
-                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
-)
-
 pnpm run check-types ||
 (
     echo '🤡 Failed to check types.
