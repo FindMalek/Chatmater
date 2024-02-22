@@ -33,6 +33,7 @@ export default async function MarketingLayout({
       </header>
       <main className="flex-1">{children}</main>
       <SiteFooter /> */}
+      {children}
     </div>
   );
 }

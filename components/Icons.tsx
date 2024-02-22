@@ -25,7 +25,7 @@ import {
   BookOpenText,
   LucideIcon,
   Github,
-  MenuSquare
+  MenuSquare,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -57,5 +57,5 @@ export const Icons = {
   twitter: X,
   check: Check,
   orderbook: BookOpenText,
-  menu: MenuSquare
+  menu: MenuSquare,
 };
