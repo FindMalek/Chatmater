@@ -10,4 +10,5 @@ export const siteConfig: SiteConfig = {
     twitter: "https://twitter.com/foundmalek",
     github: "https://github.com/FindMalek/Chatmater",
   },
+  version: "0.1.0",
 };

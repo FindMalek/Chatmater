@@ -9,17 +9,26 @@ export default function CategoryNavigationBar() {
     <Drawer>
       <Card>
         <CardHeader>
-          <CardTitle>
-            <DrawerTrigger className="flex items-center space-x-4 text-lg font-normal px-4">
-              <Icons.menu className="w-10 h-auto hover:bg-slate-200/15 transition-colors duration-200 ease-in-out p-1.5 rounded-md" />
-              <span className="hover:font-medium">
-                Message categories
-              </span>
-            </DrawerTrigger>
-            <CategoryDrawer />
+          <CardTitle className="flex items-center justify-between px-2 w-full">
+            <div className="flex items-center">
+              <DrawerTrigger>
+                <Icons.chevronUp className="w-5 h-auto" />
+              </DrawerTrigger>
+            </div>
+
+            <div className="text-center text-sm">
+              Chatmater (0.1.0v)
+            </div>
+
+            <div className="flex justify-end">
+              <DrawerTrigger>
+                <Icons.edit className="w-5 h-auto" />
+              </DrawerTrigger>
+            </div>
           </CardTitle>
         </CardHeader>
       </Card>
+      <CategoryDrawer />
     </Drawer>
   );
 }

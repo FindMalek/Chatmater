@@ -35,4 +35,5 @@ export type SiteConfig = {
     twitter: string;
     github: string;
   };
+  version: string;
 };

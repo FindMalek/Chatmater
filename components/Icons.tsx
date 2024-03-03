@@ -26,6 +26,8 @@ import {
   LucideIcon,
   Github,
   MenuSquare,
+  ChevronUpSquare,
+  FilePenLine
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -58,4 +60,6 @@ export const Icons = {
   check: Check,
   orderbook: BookOpenText,
   menu: MenuSquare,
+  chevronUp: ChevronUpSquare,
+  edit: FilePenLine
 };
