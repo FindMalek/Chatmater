@@ -2,6 +2,7 @@ import "@styles/globals.css";
 
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import type { Viewport, Metadata } from 'next'
 
 import { Toaster } from "@/components/ui/Sonner";
 import { Analytics } from "@components/Analytics";
@@ -25,9 +26,23 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export const metadata = {
+export const viewport: Viewport = {
+  width: "device-width",
+  height: "device-height",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 5,
+  userScalable: false,
+  viewportFit: "cover",
+};
+
+export const metadata: Metadata = {
   title: {
-    default: `Step up bro | ${siteConfig.name}`,
+    default: `Step it up bro - ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -60,10 +75,6 @@ export const metadata = {
     },
   ],
   creator: "findmalek",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -93,6 +104,7 @@ export const metadata = {
     apple: "favicon/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
+  metadataBase: new URL(siteConfig.url),
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
