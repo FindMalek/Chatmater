@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import type { Viewport, Metadata } from 'next'
 
-import { Toaster } from "@/components/ui/Sonner";
-import { Analytics } from "@components/Analytics";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { TailwindIndicator } from "@/components/TailwindIndicator";
+import { Toaster } from "@component/ui/Sonner";
+import { Analytics } from "@component/config/Analytics";
+import { ThemeProvider } from "@component/theme/ThemeProvider";
+import { TailwindIndicator } from "@component/config/TailwindIndicator";
 
 import localFont from "next/font/local";
 import { Inter as FontSans } from "next/font/google";

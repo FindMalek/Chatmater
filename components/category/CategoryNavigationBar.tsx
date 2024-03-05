@@ -1,8 +1,8 @@
 import { Drawer, DrawerTrigger } from "@/components/ui/Drawer";
-import { Card, CardHeader, CardTitle } from "@components/ui/Card";
+import { Card, CardHeader, CardTitle } from "@component/ui/Card";
 
-import { Icons } from "@/components/Icons";
-import CategoryDrawer from "@components/category/CategoryDrawer";
+import { Icons } from "@component/global/Icons";
+import CategoryDrawer from "@component/category/CategoryDrawer";
 
 export default function CategoryNavigationBar() {
   return (

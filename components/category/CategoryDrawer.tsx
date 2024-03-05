@@ -6,10 +6,10 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-} from "@components/ui/Drawer";
-import { Button } from "@components/ui/Button";
+} from "@component/ui/Drawer";
+import { Button } from "@component/ui/Button";
 
-import CategoryCard from "@components/category/CategoryCard";
+import CategoryCard from "@component/category/CategoryCard";
 
 export default function CategoryDrawer() {
   return (
@@ -21,7 +21,7 @@ export default function CategoryDrawer() {
         </DrawerDescription>
       </DrawerHeader>
 
-      <div className="p-4 grid grid-cols-2 gap-2 overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-200/20">
+      <div className="p-4 grid grid-cols-2 gap-2 overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-blue-200/20">
         <CategoryCard />
         <CategoryCard />
         <CategoryCard />
