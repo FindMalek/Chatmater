@@ -16,9 +16,7 @@ export default function CategoryNavigationBar() {
               </DrawerTrigger>
             </div>
 
-            <div className="text-center text-sm">
-              Chatmater (0.1.0v)
-            </div>
+            <div className="text-center text-sm">Chatmater (0.1.0v)</div>
 
             <div className="flex justify-end">
               <DrawerTrigger>

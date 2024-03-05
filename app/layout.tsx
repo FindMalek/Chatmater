@@ -2,7 +2,7 @@ import "@styles/globals.css";
 
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
-import type { Viewport, Metadata } from 'next'
+import type { Viewport, Metadata } from "next";
 
 import { Toaster } from "@component/ui/Sonner";
 import { Analytics } from "@component/config/Analytics";
