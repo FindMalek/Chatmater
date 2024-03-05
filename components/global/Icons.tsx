@@ -28,6 +28,7 @@ import {
   MenuSquare,
   ChevronUpSquare,
   FilePenLine,
+  Copy
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -61,5 +62,6 @@ export const Icons = {
   orderbook: BookOpenText,
   menu: MenuSquare,
   chevronUp: ChevronUpSquare,
+  copy: Copy,
   edit: FilePenLine,
 };
