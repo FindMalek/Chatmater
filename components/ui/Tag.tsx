@@ -28,11 +28,13 @@ export function VersionTag({ tagType }: { tagType: string }) {
 
 export function TeamTag({ tagName }: { tagName: string }) {
   const getColorForTeam = (team: string) => {
-    if (team === "team-gigi") return "text-fuchsia-700 bg-fuchsia-100 hover:bg-fuchsia-200";
+    if (team === "team-gigi")
+      return "text-fuchsia-700 bg-fuchsia-100 hover:bg-fuchsia-200";
     if (team === "team-prei") return "text-red-700 bg-red-100 hover:bg-red-200";
-    if (team === "team-nigga") return "text-emerald-700 bg-emerald-100 hover:bg-emerald-200";
+    if (team === "team-nigga")
+      return "text-emerald-700 bg-emerald-100 hover:bg-emerald-200";
     return "text-blue-700 bg-blue-100 hover:bg-blue-200";
-  }
+  };
   const teamColorClass = getColorForTeam(tagName);
 
   return (

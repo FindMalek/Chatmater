@@ -12,7 +12,6 @@ export default function CategoryNavigationBar() {
           <CardTitle className="flex items-center justify-between px-2 w-full">
             <div className="flex items-center">
               <DrawerTrigger>
-
                 <Icons.chevronUp className="w-5 h-auto" />
               </DrawerTrigger>
             </div>

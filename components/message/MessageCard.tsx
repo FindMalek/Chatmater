@@ -1,5 +1,5 @@
 import { Icons } from "@component/ui/Icons";
-import { Button } from "@component/ui/Button"
+import { Button } from "@component/ui/Button";
 import { VersionTag } from "@component/ui/Tag";
 import { UserAvatar } from "@component/UserAvatar";
 import { Avatar, AvatarFallback, AvatarImage } from "@component/ui/Avatar";

@@ -29,7 +29,7 @@ import {
   ChevronUpSquare,
   FilePenLine,
   Copy,
-  CalendarPlus
+  CalendarPlus,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -65,5 +65,5 @@ export const Icons = {
   chevronUp: ChevronUpSquare,
   copy: Copy,
   edit: FilePenLine,
-  calendar: CalendarPlus
+  calendar: CalendarPlus,
 };
