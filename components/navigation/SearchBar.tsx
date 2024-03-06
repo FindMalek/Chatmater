@@ -8,7 +8,7 @@ export default function SearchBar() {
       <CardHeader>
         <CardTitle className="flex items-center justify-between space-x-4 py-1">
           <Avatar className="w-8 h-auto">
-            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarImage src="https://github.com/findmalek.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Input

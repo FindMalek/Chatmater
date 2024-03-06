@@ -1,7 +1,7 @@
 import { Drawer, DrawerTrigger } from "@/components/ui/Drawer";
 import { Card, CardHeader, CardTitle } from "@component/ui/Card";
 
-import { Icons } from "@component/global/Icons";
+import { Icons } from "@component/ui/Icons";
 import CategoryDrawer from "@component/category/CategoryDrawer";
 
 export default function CategoryNavigationBar() {
@@ -12,6 +12,7 @@ export default function CategoryNavigationBar() {
           <CardTitle className="flex items-center justify-between px-2 w-full">
             <div className="flex items-center">
               <DrawerTrigger>
+
                 <Icons.chevronUp className="w-5 h-auto" />
               </DrawerTrigger>
             </div>
@@ -20,7 +21,7 @@ export default function CategoryNavigationBar() {
 
             <div className="flex justify-end">
               <DrawerTrigger>
-                <Icons.edit className="w-5 h-auto" />
+                <Icons.add className="w-5 h-auto" />
               </DrawerTrigger>
             </div>
           </CardTitle>
