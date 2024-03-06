@@ -1,11 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@component/ui/Avatar";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/HoverCard";
-import { TeamTag } from "@component/ui/Tag";
 import { Icons } from "@component/ui/Icons";
+import { TeamTag } from "@component/ui/Tag";
+import { Avatar, AvatarFallback, AvatarImage } from "@component/ui/Avatar";
 
 export function UserAvatar({ children }: { children: React.ReactNode }) {
   return (
@@ -24,7 +24,7 @@ export function UserAvatar({ children }: { children: React.ReactNode }) {
             </div>
 
             <p className="text-sm">
-              Hello there! I'm a software engineer and I love it
+              Hello there! I&apos;m a software engineer and I love it
             </p>
             <div className="flex items-center pt-2">
               <Icons.calendar className="mr-2 h-4 w-4 opacity-70" />{" "}
