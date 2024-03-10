@@ -20,10 +20,10 @@ export function MessageCopy({ message }: { message: string }) {
   return (
     <Card
       onClick={handleCopyClick}
-      className="flex items-start max-w-fit text-xs px-2 py-1 space-x-2 text-gray-500 hover:text-purple-500 transition-colors duration-200 ease-in-out cursor-pointer"
+      className="flex items-start max-w-fit text-xs px-2 py-1 space-x-2 text-gray-500 hover:text-indigo-400 transition-colors duration-200 ease-in-out cursor-pointer"
     >
       {isCopied ? (
-        <Icons.check className="w-3 h-3 text-purple-500 shrink-0" />
+        <Icons.check className="w-3 h-3 text-indigo-400 shrink-0" />
       ) : (
         <Icons.copy className="w-3 h-3 shrink-0" />
       )}

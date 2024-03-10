@@ -1,4 +1,4 @@
-import { Input } from "@component/ui/Input";
+import { InputSearch } from "@component/navigation/InputSearch";
 import { Card, CardHeader, CardTitle } from "@component/ui/Card";
 import { Avatar, AvatarFallback, AvatarImage } from "@component/ui/Avatar";
 
@@ -11,10 +11,7 @@ export default function SearchBar() {
             <AvatarImage src="https://github.com/findmalek.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Input
-            className="w-full max-h-8"
-            placeholder="Search for a message, tag, category, or user..."
-          />
+          <InputSearch />
         </CardTitle>
       </CardHeader>
     </Card>
