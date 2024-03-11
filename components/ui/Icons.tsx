@@ -30,7 +30,7 @@ import {
   FilePenLine,
   Copy,
   CalendarPlus,
-  Send
+  Send,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -67,5 +67,5 @@ export const Icons = {
   copy: Copy,
   edit: FilePenLine,
   calendar: CalendarPlus,
-  send: Send
+  send: Send,
 };

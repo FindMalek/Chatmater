@@ -3,7 +3,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@component/ui/Tooltip"
+} from "@component/ui/Tooltip";
 import { Icons } from "@component/ui/Icons";
 import { Button } from "@component/ui/Button";
 import { VersionTag } from "@component/ui/Tag";
@@ -46,23 +46,21 @@ export default function MessageCard() {
       </CardHeader>
       <Message />
       <CardContent className="p-1 px-2">
-        <TooltipProvider >
+        <TooltipProvider>
           <div className="flex items-center justify-between">
             <div className="space-x-2">
               <Tooltip>
-                <TooltipTrigger>
-                  <Button variant="outline" size="icon" >
+                <TooltipTrigger asChild>
+                  <Button variant="outline" size="icon">
                     <Icons.copy className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    Copies the next message to the clipboard.
-                  </p>
+                  <p>Copies the next message to the clipboard.</p>
                 </TooltipContent>
               </Tooltip>
               <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <Button variant="outline" size="icon" disabled>
                     <Icons.send className="h-4 w-4" />
                   </Button>
@@ -79,39 +77,33 @@ export default function MessageCard() {
             </div>
             <div className="space-x-2">
               <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <Button variant="outline" size="icon">
                     <Icons.chevronLeft className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    Go to the previous message in the thread.
-                  </p>
+                  <p>Go to the previous message in the thread.</p>
                 </TooltipContent>
               </Tooltip>
               <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <Button variant="outline" size="icon">
                     <Icons.chevronRight className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    Go to the next message in the thread.
-                  </p>
+                  <p>Go to the next message in the thread.</p>
                 </TooltipContent>
               </Tooltip>
               <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <Button variant="outline" size="icon">
                     <Icons.edit className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    Edit the message.
-                  </p>
+                  <p>Edit the message.</p>
                 </TooltipContent>
               </Tooltip>
             </div>
