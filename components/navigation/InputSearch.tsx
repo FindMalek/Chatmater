@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 
 import {
-  Command,
   CommandDialog,
   CommandEmpty,
   CommandGroup,
@@ -11,7 +10,6 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@component/ui/Command";
 import { Input } from "@component/ui/Input";
 import { placeholderTexts } from "@/config/search";

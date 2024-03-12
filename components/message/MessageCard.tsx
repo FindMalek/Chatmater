@@ -13,38 +13,47 @@ import { Card, CardTitle, CardHeader, CardContent } from "@component/ui/Card";
 import { UserAvatar } from "@component/UserAvatar";
 import { MessageCopy } from "@component/message/MessageCopy";
 
-function Message() {
+import { ClusterType, MessageType } from "@/types/cluster";
+
+function Message({ messages }: { messages: MessageType[] }) {
   return (
     <div>
-      <MessageCopy message="This is a message that is being copied" />
-      <MessageCopy message="This is a longer message than the previous one because i'm not sure of the cards length so far it looks good" />
-      <MessageCopy message="I really think that min-w-fit looks good what do u think of that class?" />
-      <MessageCopy message="This is a message that is being copied" />
+      {messages.map((message) => (
+        <MessageCopy key={message.id} message={message.content} />
+      ))}
     </div>
   );
 }
 
-export default function MessageCard() {
+export default async function MessageCard({
+  cluster,
+}: {
+  cluster: ClusterType;
+}) {
   return (
     <Card className="mx-auto rounded-lg">
       <CardHeader className="p-2">
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center">
-            <UserAvatar>
+            <UserAvatar user={cluster.user}>
               <Avatar className="h-5 w-5">
-                <AvatarImage src="https://github.com/findmalek.png" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarImage src={cluster.user.avatar} />
+                <AvatarFallback>{cluster.user.username[0]}</AvatarFallback>
               </Avatar>
             </UserAvatar>
             <p className="ml-2 text-xs text-gray-200">
-              A small description of what these messages talk about, dosent have
-              to be long.
+              {cluster.details.about}
             </p>
           </div>
-          <VersionTag tagType="version-100" />
+          <VersionTag
+            tagType={cluster.details.version}
+            maxVersion={cluster.details.maxVersion}
+          />
         </CardTitle>
       </CardHeader>
-      <Message />
+
+      <Message messages={cluster.messages} />
+
       <CardContent className="p-1 px-2">
         <TooltipProvider>
           <div className="flex items-center justify-between">

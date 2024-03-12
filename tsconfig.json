@@ -22,7 +22,8 @@
       "@component/*": ["./components/*"],
       "@styles/*": ["./styles/*"],
       "@hook/*": ["./hooks/*"],
-      "@lib/*": ["./lib/*"]
+      "@lib/*": ["./lib/*"],
+      "@data/*": ["./data/*"]
     }
   },
   "include": [
@@ -31,7 +32,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "lib/seeder.mjs"
   ],
   "exclude": ["node_modules"]
 }

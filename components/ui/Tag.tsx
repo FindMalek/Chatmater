@@ -1,13 +1,22 @@
 import { Badge } from "@component/ui/Badge";
 
-export function VersionTag({ tagType }: { tagType: string }) {
+export function VersionTag({
+  tagType,
+  maxVersion,
+}: {
+  tagType: string;
+  maxVersion: string;
+}) {
   const versionMatch = tagType.match(/\d+$/);
   const versionNumber = versionMatch ? parseInt(versionMatch[0], 10) : 1;
 
-  const maxVersion = 100;
+  const maxVersionMatch = maxVersion.match(/\d+$/);
+  const maxVersionNumber = maxVersionMatch
+    ? parseInt(maxVersionMatch[0], 10)
+    : 1;
 
   const getColorForVersion = (version: number) => {
-    const ratio = version / maxVersion;
+    const ratio = version / maxVersionNumber;
     if (ratio < 0.33) return "text-green-700 bg-green-100 hover:bg-green-200";
     if (ratio < 0.66)
       return "text-yellow-700 bg-yellow-100 hover:bg-yellow-200";
