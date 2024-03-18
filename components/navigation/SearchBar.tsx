@@ -2,7 +2,11 @@ import { InputSearch } from "@component/navigation/InputSearch";
 import { Card, CardHeader, CardTitle } from "@component/ui/Card";
 import { Avatar, AvatarFallback, AvatarImage } from "@component/ui/Avatar";
 
-export default function SearchBar() {
+import { User } from "@prisma/client";
+
+export default function SearchBar({ user }: {
+  user: User;
+}) {
   return (
     <Card className="w-full">
       <CardHeader>

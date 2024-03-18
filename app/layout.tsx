@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import type { Viewport, Metadata } from "next";
 
-import { Toaster } from "@component/ui/Sonner";
+import { Toaster } from "@component/ui/Toaster";
 import { Analytics } from "@component/config/Analytics";
 import { ThemeProvider } from "@component/theme/ThemeProvider";
 import { TailwindIndicator } from "@component/config/TailwindIndicator";

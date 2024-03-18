@@ -12,7 +12,7 @@ import {
   CommandSeparator,
 } from "@component/ui/Command";
 import { Input } from "@component/ui/Input";
-import { placeholderTexts } from "@/config/search";
+import { placeholderTexts } from "@config/search";
 
 export function InputSearch() {
   const [open, setOpen] = useState(false);

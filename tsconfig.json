@@ -23,7 +23,8 @@
       "@styles/*": ["./styles/*"],
       "@hook/*": ["./hooks/*"],
       "@lib/*": ["./lib/*"],
-      "@data/*": ["./data/*"]
+      "@data/*": ["./data/*"],
+      "@config/*": ["./config/*"]
     }
   },
   "include": [

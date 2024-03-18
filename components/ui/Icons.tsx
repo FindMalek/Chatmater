@@ -33,6 +33,8 @@ import {
   Send,
 } from "lucide-react";
 
+import { FaDiscord } from "react-icons/fa";
+
 export type Icon = LucideIcon;
 
 export const Icons = {
@@ -68,4 +70,5 @@ export const Icons = {
   edit: FilePenLine,
   calendar: CalendarPlus,
   send: Send,
+  discord: FaDiscord,
 };

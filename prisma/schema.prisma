@@ -1,0 +1,109 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL_DEV")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @default(now()) @map(name: "updated_at")
+  role      String   @default("user")
+
+  clusters Cluster[]
+  accounts Account[]
+  sessions Session[]
+
+  @@map("users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  name      String
+  scenarios Scenario[]
+
+  @@map("categories")
+}
+
+model Scenario {
+  id             String    @id @default(cuid())
+  categoryId     String
+  category       Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  clusters       Cluster[]
+  currentVersion Int
+  maxVersion     Int
+
+  @@map("scenarios")
+}
+
+model Cluster {
+  id             String    @id @default(cuid())
+  name           String
+  version        Int
+  maxVersion     Int
+  scenarioId     String
+  scenario       Scenario  @relation(fields: [scenarioId], references: [id], onDelete: Cascade)
+  linkedClusters String[]
+  messages       Message[]
+  User           User      @relation(fields: [userId], references: [id])
+  userId         String
+
+  @@map("clusters")
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  clusterId String
+  cluster   Cluster  @relation(fields: [clusterId], references: [id], onDelete: Cascade)
+  content   String
+  repliedTo Boolean
+  createdAt DateTime @default(now())
+
+  @@map("messages")
+}
