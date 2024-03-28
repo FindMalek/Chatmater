@@ -30,6 +30,7 @@ import {
   FilePenLine,
   Copy,
   CalendarPlus,
+  Monitor,
   Send,
 } from "lucide-react";
 
@@ -71,4 +72,5 @@ export const Icons = {
   calendar: CalendarPlus,
   send: Send,
   discord: FaDiscord,
+  monitor: Monitor,
 };

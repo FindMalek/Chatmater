@@ -106,7 +106,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
           className={cn(buttonVariants({ variant: "outline" }))}
           onClick={() => {
             setIsDiscordLoading(true);
-            signIn("discord", { callbackUrl: "/dashboard" });
+            signIn("discord", { callbackUrl: "/recommender" });
           }}
           disabled={isLoading || isDiscordLoading}
         >

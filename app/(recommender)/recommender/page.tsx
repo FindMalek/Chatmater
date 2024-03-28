@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 import { ClusterType } from "@/types/cluster";
-import MessageCard from "@component/message/MessageCard";
+import MessageCard from "@component/display/MessageCard";
 
 export const metadata = {
     title: "Recommender",

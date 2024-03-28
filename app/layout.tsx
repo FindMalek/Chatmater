@@ -6,7 +6,7 @@ import type { Viewport, Metadata } from "next";
 
 import { Toaster } from "@component/ui/Toaster";
 import { Analytics } from "@component/config/Analytics";
-import { ThemeProvider } from "@component/theme/ThemeProvider";
+import { ThemeProvider } from "@component/config/ThemeProvider";
 import { TailwindIndicator } from "@component/config/TailwindIndicator";
 
 import localFont from "next/font/local";

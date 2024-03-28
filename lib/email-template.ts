@@ -6,7 +6,7 @@ import { MagicLink } from "@component/email/MagicLink";
 export function selectMailOptions(type: string, body: MagicLinkData) {
   let html;
   const mailOptions = {
-    from: `Undrstnd <${process.env.EMAIL_SENDER}>`,
+    from: `Chatmater {process.env.EMAIL_SENDER}>`,
     to: process.env.MAIN_EMAIL,
   };
 
@@ -16,7 +16,7 @@ export function selectMailOptions(type: string, body: MagicLinkData) {
       return {
         from: mailOptions.from,
         to: (body as MagicLinkData).email,
-        subject: `Your magic link for Undrstnd`,
+        subject: `Your magic link for Chatmater`,
         html: html,
       };
     default:

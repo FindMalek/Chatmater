@@ -11,7 +11,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@component/ui/Avatar";
 import { Card, CardTitle, CardHeader, CardContent } from "@component/ui/Card";
 
 import { UserAvatar } from "@component/UserAvatar";
-import { MessageCopy } from "@component/message/MessageCopy";
+import { MessageCopy } from "@component/display/MessageCopy";
 
 import { ClusterType, MessageType } from "@/types/cluster";
 
