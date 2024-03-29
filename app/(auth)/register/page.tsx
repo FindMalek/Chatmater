@@ -27,20 +27,16 @@ export default function RegisterPage() {
           href="/login"
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            "relative w-fit z-20 flex items-center text-lg font-semibold")}
+            "relative w-fit z-20 flex items-center text-lg font-semibold"
+          )}
         >
-          <span className="text-2xl">🤖</span>{" "}
-          Chatmater
+          <span className="text-2xl">🤖</span> Chatmater
         </Link>
-        <div >
-
-        </div>
+        <div></div>
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
             <p className="text-lg">
-              &ldquo;
-              The next generation of chatbots is here.
-              &rdquo;
+              &ldquo; The next generation of chatbots is here. &rdquo;
             </p>
             <footer className="text-sm">@findmalek</footer>
           </blockquote>
@@ -49,7 +45,6 @@ export default function RegisterPage() {
       <div className="lg:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-
             <span className="text-4xl">🤖</span>
 
             <h1 className="text-2xl font-semibold tracking-tight">
@@ -59,7 +54,7 @@ export default function RegisterPage() {
               Enter your email below to create your account
             </p>
           </div>
-          
+
           <Suspense fallback={<UserAuthSkeleton />}>
             <UserAuthForm />
           </Suspense>

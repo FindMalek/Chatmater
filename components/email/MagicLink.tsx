@@ -24,11 +24,7 @@ export function MagicLink({ magicLink }: { magicLink: MagicLinkData }) {
       </Preview>
       <Body style={main}>
         <Container style={container}>
-          <Img
-            alt="Chatmater"
-            src="https://emojicdn.elk.sh/🤖"
-            style={logo}
-          />
+          <Img alt="Chatmater" src="https://emojicdn.elk.sh/🤖" style={logo} />
           <Heading style={heading}>Your login code for Chatmater</Heading>
           <Section style={buttonContainer}>
             <Button style={button} href={`${magicLink.otp_link}`}>
